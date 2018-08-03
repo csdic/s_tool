@@ -1,1 +1,15 @@
-{{r_contents}}
+<html>
+
+<body>
+
+{% for contents in r_contents %}
+<div>
+
+    <p> ({{contents._type}}){{contents._contents}} </p>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>
