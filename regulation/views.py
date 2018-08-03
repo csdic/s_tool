@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+# create your views here
+
+def regulation_text(request):
+    return render(request, 'regulation/regulation_text.html', {})
+
