@@ -18,8 +18,8 @@ def regulation_text(request):
             num = s_line[0].split('.')
             section_type = len(num)
 
-        tmp = {"id":e._id,"type":section_type,"content":e._content}
-        regulation_lines.append(tmp)
+         tmp = {"id":e._id,"type":section_type,"content":e._content}
+         regulation_lines.append(tmp)
 
     return render(request,'regulation/regulation_text.html',{'r_contents': regulation_lines})
 
