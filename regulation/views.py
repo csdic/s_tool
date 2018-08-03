@@ -16,7 +16,7 @@ def regulation_text(request):
          if e._type == "section_title":
             s_line = e._content.split(' ')
             num = s_line[0].split('.')
-            assert section_type = len(num)
+            section_type = len(num)
 
         tmp = {"id":e._id,"type":section_type,"content":e._content}
         regulation_lines.append(tmp)
