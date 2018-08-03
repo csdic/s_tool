@@ -14,7 +14,7 @@ def regulation_text(request):
 
     for e in r_contents:
     #    tmp = [e._id,e._type,e._content]
-        tmp = {"id":e._id,"type":e._type,"content":e._contents}
+        tmp = {"id":e._id,"type":e._type,"content":e._content}
         regulation_lines.append(tmp)
 
 
