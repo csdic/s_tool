@@ -18,5 +18,5 @@ def regulation_text(request):
 
 
 
-    return render(request, 'regulation/regulation_text.html', {'r_contents': regulation_lines})
+    return render(request,'regulation/regulation_text.html',{'r_contents': regulation_lines})
 
