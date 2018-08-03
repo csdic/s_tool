@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from . import view
+from . import views
 
 urlpatterns = [
-	url(r'^$',view.regulation_text, name='regulation_main')
+    url(r'^$', views.regulation_text, name='regulation_main')
 ]
