@@ -1,15 +1,22 @@
-
+{% load static %}
 <html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+ <link rel="stylesheet" href="{% static 'css/regulation.css' %}">
 
+</head>
 <body>
 
 {% for line in r_contents %}
 
 <div>
+  {% if line.type == "section_title" %}
+    <h2>{{ line.contents }}</h2>
+  {% else %}
+    <p> {{ line.contents }} </p>
 
- <p> {{ line.type }} </p>
-
-</div>
+ </div>
 {% endfor %}
 
 
