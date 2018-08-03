@@ -20,6 +20,7 @@ def regulation_text(request):
 
          tmp = {"id":e._id,"type":section_type,"content":e._content}
          regulation_lines.append(tmp)
+         section_type = 0
 
     return render(request,'regulation/regulation_text.html',{'r_contents': regulation_lines})
 
