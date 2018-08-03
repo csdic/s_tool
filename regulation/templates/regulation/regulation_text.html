@@ -11,8 +11,19 @@
 {% for line in r_contents %}
 
 <div>
-  {% if line.type == "section_title" %}
-    <h2>{{ line.content }}</h2>
+  {% if line.type == 1 %}
+    <h1>{{ line.content }}</h1>
+
+  {% elif line.type == 2 %}
+        <h2>{{ line.content }}</h2>
+ {% elif line.type == 3 %}
+        <h3>{{ line.content }}</h3>
+ {% elif line.type == 4 %}
+        <h4>{{ line.content }}</h4>
+ {% elif line.type == 5 %}
+        <h5>{{ line.content }}</h5>
+ {% elif line.type == 6 %}
+        <h6>{{ line.content }}</h6>
   {% else %}
     <p> {{ line.content }} </p>
   {% endif %}
