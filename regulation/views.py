@@ -10,5 +10,13 @@ from .models import RegulationBody
 
 def regulation_text(request):
     r_contents = RegulationBody.objects.all()
-    return render(request, 'regulation/regulation_text.html', {'r_contents': r_contents})
+    regulation_lines = []
+
+    for e in r_contents:
+        tmp = [e._id,e._type,e._content]
+        regulation_lines.append(tmp)
+
+
+
+    return render(request, 'regulation/regulation_text.html', {'r_contents': regulation_lines})
 
