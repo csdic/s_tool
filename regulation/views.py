@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 # User define module
 from .models import RegulationBody
+from .models import KinacSC
 
 # create your views here
 
@@ -24,3 +25,5 @@ def regulation_text(request):
 
     return render(request,'regulation/regulation_text.html',{'r_contents': regulation_lines})
 
+def kinac_security_control(request):
+    pass
